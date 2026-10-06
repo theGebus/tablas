@@ -1,0 +1,85 @@
+/* Estilos independientes: sin librerías ni JavaScript. */
+:root {
+  --fondo: #111315;
+  --texto: #f4f3ef;
+  --secundario: #a9adb1;
+  --acento: #dfbf7d;
+}
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--fondo);
+  color: var(--texto);
+  font-family: Arial, Helvetica, sans-serif;
+}
+.encabezado {
+  max-width: 1180px;
+  margin: auto;
+  padding: 27px 40px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  border-bottom: 1px solid #303235;
+}
+.marca { color: var(--texto); text-decoration: none; font-size: 25px; font-weight: 800; letter-spacing: -1px; }
+.marca span { display: block; margin-top: 7px; font-size: 9px; letter-spacing: 2px; color: var(--secundario); }
+form { margin: 0; }
+.boton { padding: 14px 23px; border: 1px solid var(--acento); border-radius: 6px; background: var(--acento); color: #17191b; font: 700 12px Arial, sans-serif; letter-spacing: 1px; cursor: pointer; }
+.boton span { margin-left: 18px; font-size: 18px; }
+.boton:hover { background: #efcf8d; }
+a:focus-visible, button:focus-visible { outline: 3px solid white; outline-offset: 5px; }
+.contenido { max-width: 1180px; margin: auto; padding: 60px 40px; display: grid; grid-template-columns: 1fr 1fr; gap: 70px; align-items: center; }
+.etiqueta { margin: 0 0 22px; color: var(--acento); font-size: 10px; letter-spacing: 2px; font-weight: 700; line-height: 1.6; }
+h1 { margin: 0; font-size: clamp(38px, 4.3vw, 60px); line-height: 1.12; letter-spacing: -2px; }
+h1 span { color: var(--acento); }
+.descripcion { max-width: 370px; margin: 25px 0 35px; font-size: 15px; line-height: 1.8; color: var(--secundario); }
+.identidad { display: flex; gap: 18px; align-items: center; }
+.identidad img { width: 100px; height: 100px; object-fit: contain; border-radius: 10px; }
+.identidad strong { font-size: 19px; }
+.identidad p { color: var(--secundario); font-size: 12px; line-height: 1.5; }
+.panel { overflow: hidden; background: #f9f8f5; color: #202529; border-radius: 16px; border: 1px solid #dad7d0; box-shadow: 0 20px 55px #0004; scroll-margin-top: 24px; }
+.panel:focus { outline: 3px solid var(--acento); outline-offset: 5px; }
+.cabecera-panel { display: flex; align-items: center; justify-content: space-between; gap: 12px; padding: 25px 28px 20px; }
+.cabecera-panel .etiqueta { color: #72603b; margin-bottom: 8px; font-size: 9px; }
+h2 { margin: 0; font-size: 28px; letter-spacing: -1px; }
+.numero { font-size: 48px; font-weight: 800; color: #e3dfd6; }
+table { width: 100%; border-collapse: collapse; font-variant-numeric: tabular-nums; }
+caption { position: absolute; width: 1px; height: 1px; overflow: hidden; clip-path: inset(50%); }
+th, td { padding: 10px 28px; text-align: left; }
+thead { background: #ebe9e3; color: #5d6265; font-size: 10px; text-transform: uppercase; letter-spacing: 1px; }
+thead th { padding-top: 12px; padding-bottom: 12px; }
+tbody th { font-size: 15px; font-weight: 500; }
+tbody td { font-size: 17px; font-weight: 700; }
+th:last-child, td:last-child { text-align: right; }
+tbody tr { border-bottom: 1px solid #e7e5de; }
+tbody tr:nth-child(even) { background: #f0efeb; }
+tbody tr:hover { background: #ede3ce; }
+.nota { margin: 0; padding: 18px 28px; color: #61635f; font-size: 11px; line-height: 1.6; }
+.nota span { color: #8b6d30; margin-right: 7px; }
+footer { max-width: 1100px; margin: 0 auto; border-top: 1px solid #303235; padding: 24px 20px; text-align: center; color: var(--secundario); font-size: 11px; line-height: 1.7; }
+footer strong { color: var(--texto); }
+@media (max-width: 800px) {
+  .contenido { gap: 35px; padding: 40px 28px; }
+  .encabezado { padding: 24px 28px; }
+  h1 { font-size: 40px; }
+  .cabecera-panel { padding: 22px; }
+  th, td { padding-left: 22px; padding-right: 22px; }
+}
+@media (max-width: 600px) {
+  .encabezado { padding: 20px; }
+  .marca { font-size: 22px; }
+  .marca span { font-size: 8px; letter-spacing: 1.4px; }
+  .boton { padding: 12px 16px; }
+  .boton span { margin-left: 10px; }
+  .contenido { grid-template-columns: 1fr; padding: 36px 20px; gap: 32px; }
+  h1 { font-size: clamp(36px, 9vw, 48px); }
+  .descripcion { margin: 22px 0; }
+  .identidad img { width: 80px; height: 80px; }
+  footer { margin: 0 20px; padding: 22px 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+}
