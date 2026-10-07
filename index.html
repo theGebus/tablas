@@ -6,6 +6,7 @@
   <meta name="description" content="Aprende la tabla del 3 con theGebus.">
   <title>Tabla del 3 | theGebus</title>
   <link rel="stylesheet" href="multiplicar.css">
+  <script src="multiplicar.js"></script>
 </head>
 <body>
   <header class="encabezado">
@@ -31,11 +32,12 @@
       <div class="cabecera-panel">
         <div><p class="etiqueta">MATEMÁTICA ESENCIAL</p><h2 id="titulo-tabla">Tabla del 3</h2></div>
         <span class="numero" aria-hidden="true">03</span>
+        <button onclick="generarTablas();">Probar js</button>
       </div>
-      <table>
+      <table  >
         <caption>Multiplicaciones del 3, del 1 al 10</caption>
-        <thead><tr><th scope="col">Operación</th><th scope="col">Resultado</th></tr></thead>
-        <tbody>
+        <thead > <tr><th scope="col">tabla del 5 </th><th scope="col">Tabla del 3</th></tr></thead>
+        <tbody id="contenedorTablas" >
           <tr><th scope="row">3 × 1</th><td>3</td></tr>
           <tr><th scope="row">3 × 2</th><td>6</td></tr>
           <tr><th scope="row">3 × 3</th><td>9</td></tr>
