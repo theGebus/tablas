@@ -7,6 +7,7 @@
   <title>Tabla del 3 | theGebus</title>
   <link rel="stylesheet" href="multiplicar.css">
   <script src="multiplicar.js"></script>
+  <script src="utilitarios.js"></script>
 </head>
 <body>
   <header class="encabezado">
@@ -20,8 +21,8 @@
   <main class="contenido">
     <section class="presentacion" aria-labelledby="titulo">
       <p class="etiqueta">CONOCIMIENTO QUE MULTIPLICA</p>
-      <h1 id="titulo">Cada paso<br>cuenta.<br><span>Multiplica por 3.</span></h1>
-      <p class="descripcion">Una base sólida empieza con lo esencial. Explora la tabla del 3 y sigue sumando conocimiento.</p>
+      <h1 id="titulo">Cada paso<br>cuenta.<br><span>Multiplica .</span></h1>
+      <p class="descripcion">Una base sólida empieza con lo esencial. Explora las tablas y sigue sumando conocimiento.</p>
       <div class="identidad">
         <img src="Logo-oficial-theGebus.png" alt="Logo de theGebus: conejo negro con corona" width="1254" height="1254">
         <div><strong>theGebus</strong><p>Ideas. Diseño. Tecnología.</p></div>
@@ -30,13 +31,31 @@
 
     <section class="panel" id="tabla" aria-labelledby="titulo-tabla" tabindex="-1">
       <div class="cabecera-panel">
-        <div><p class="etiqueta">MATEMÁTICA ESENCIAL</p><h2 id="titulo-tabla">Tabla del 3</h2></div>
+        <div><p class="etiqueta">MATEMÁTICA ESENCIAL</p><h2 id="titulo-tabla">Tablas</h2></div>
         <span class="numero" aria-hidden="true">03</span>
-        <button onclick="generarTablas();">Probar js</button>
       </div>
+      <!-- Caja para ingresar el número de la tabla. -->
+      <div class="selector-tabla">
+        <label for="txtNumeroTabla">¿Qué tabla quieres practicar?</label>
+        <div class="controles-tabla">
+          <input
+            type="text"
+            id="txtNumeroTabla"
+            name="numeroTabla"
+            inputmode="numeric"
+            placeholder="Ejemplo: 8"
+            aria-describedby="ayudaTabla"
+          >
+          <button class="boton" id="btnGenerarTabla" type="button" onclick="generarTablas();">
+            PROBAR
+          </button>
+        </div>
+        <p id="ayudaTabla">Escribe el número de la tabla que quieres practicar.</p>
+      </div>
+
       <table  >
         <caption>Multiplicaciones del 3, del 1 al 10</caption>
-        <thead > <tr><th scope="col">tabla del 5 </th><th scope="col">Tabla del 3</th></tr></thead>
+        <thead > <tr><th scope="col">tabla  </th><th scope="col">Resultado</th></tr></thead>
         <tbody id="contenedorTablas" >
           <tr><th scope="row">3 × 1</th><td>3</td></tr>
           <tr><th scope="row">3 × 2</th><td>6</td></tr>
